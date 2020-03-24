@@ -1,7 +1,7 @@
 {
-  "name": "migrate-mongoose-typescript",
-  "version": "3.3.3",
-  "description": "A mongoose based migration framework for node with Typescript support",
+  "name": "@jtdaugh/migrate-mongoose-babel7",
+  "version": "3.3.5",
+  "description": "A mongoose based migration framework for node with Typescript + babel 7 support",
   "main": "./dist/lib.js",
   "scripts": {
     "prepublish": "scripts/prepublish.sh",
@@ -23,7 +23,7 @@
     "db",
     "nosql"
   ],
-  "author": "Santiago Quinteros <santiago@whyline.com>",
+  "author": "Jesse Daugherty <jtdaugh@umich.edu>",
   "contributors": [
     {
       "name": "Fernando López Guevara",
@@ -43,11 +43,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/whyline/migrate-mongoose.git"
+    "url": "https://github.com/lexmarkets/migrate-mongoose.git"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-typescript": "^7.9.0",

@@ -192,6 +192,8 @@ export default class Migrator {
       if (this.es6) {
         require('@babel/register')({
           extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          presets: ["@babel/preset-env"],
+          plugins: ["@babel/plugin-transform-runtime"],
         });
         require('@babel/polyfill');
       }
