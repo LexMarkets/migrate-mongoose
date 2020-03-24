@@ -1,6 +1,10 @@
 {
-  "presets": ["latest"],
-  "plugins": ["transform-runtime"],
+  "presets": [
+    ["@babel/preset-env", {
+      "modules": "commonjs"
+    }],
+    "@babel/typescript",
+  ],
   "env": {
       "development": {
         "sourceMaps": "inline"

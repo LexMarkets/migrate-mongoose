@@ -190,12 +190,10 @@ export default class Migrator {
     for (const migration of migrationsToRun) {
       const migrationFilePath = path.join(self.migrationPath, migration.filename);
       if (this.es6) {
-        require('babel-register')({
-          "presets": [require("babel-preset-latest")],
-          "plugins": [require("babel-plugin-transform-runtime")]
+        require('@babel/register')({
+          extensions: ['.js', '.jsx', '.ts', '.tsx'],
         });
-
-        require('babel-polyfill');
+        require('@babel/polyfill');
       }
 
       if (this.typescript) {
