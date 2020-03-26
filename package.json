@@ -1,6 +1,6 @@
 {
   "name": "@jtdaugh/migrate-mongoose-babel7",
-  "version": "3.3.5",
+  "version": "3.3.6",
   "description": "A mongoose based migration framework for node with Typescript + babel 7 support",
   "main": "./dist/lib.js",
   "scripts": {

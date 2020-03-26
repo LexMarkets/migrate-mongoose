@@ -16,10 +16,20 @@ Promise.config({
 
 const es6Template =
 `
+import 'envkey'; // So that we can connect to db in the following step
+import { mongoose, User } from '@lex/models'; // Import any models needed and the mongoose object
+
+// This is silly, but the mongoose connection the library uses to read migration state
+// is different from the one for our models so re-establish the connection.
+if (mongoose.connection.readyState != mongoose.STATE_OPEN) {
+  mongoose.connect(process.env.MONGO_URL);
+}
+
 /**
  * Make any changes you need to make to the database here
  */
 export async function up () {
+  mongoose.createConnection(process.env.dbConnectionUri);
   // Write migration here
 }
 
